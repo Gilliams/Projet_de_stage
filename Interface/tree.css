@@ -1,0 +1,28 @@
+#tree{
+    background-color: lightgrey;
+}
+.item {
+    cursor: pointer;
+}
+.bold {
+    font-weight: bold;
+}
+ul {
+    padding-left: 1em;
+    line-height: 1.5em;
+    list-style-type: dot;
+}
+.zone-add{
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    background-color: darkred;
+    display: inline-block;
+}
+.zone-del{
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    background-color: dodgerblue;
+    display: inline-block;
+}

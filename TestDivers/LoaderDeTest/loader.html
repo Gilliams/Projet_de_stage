@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .section{
+            background-color: #000000;
+            color: #fff;
+            height: 500px;
+            line-height: 500px;
+        }
+        .loader{
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+        }
+        .loader-bars:before,
+        .loader-bars:after,
+        .loader-bars span{
+            content:'';
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 10px;
+            height: 30px;
+            background-color: #fff;
+            -webkit-animation:grow 1s linear infinite;
+            animation:grow 1s linear infinite ;
+        }
+        .loader-bars:after{
+            left: 15px;
+            animation-delay: -.66s;
+            -webkit-animation-delay: -.66s;
+        }
+        .loader-bars span {
+            left: 30px;
+            animation-delay: -.33s;
+            -webkit-animation-delay: -.33s;
+        }
+        @keyframes grow {
+            0%{transform: scaleY(0); opacity: 0;}
+            50%{transform: scaleY(1); opacity: 1;}
+            100%{transform: scaleY(0); opacity: 0;}
+        }
+    </style>
+</head>
+<body>
+<section class="section section-4">
+    <span class="loader loader-bars"><span></span></span>
+    Chargement...
+</section>
+</body>
+</html>

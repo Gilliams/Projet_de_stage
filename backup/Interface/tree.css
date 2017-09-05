@@ -1,0 +1,16 @@
+#tree{
+    background-color: lightgrey;
+}
+.parent{
+    list-style: none;
+}
+.child{
+    list-style: none;
+}
+.grand-child{
+    list-style: none;
+}
+.icone{
+    width: 20px;
+    height: 20px;
+}

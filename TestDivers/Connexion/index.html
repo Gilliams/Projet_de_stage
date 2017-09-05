@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Page d'accueil</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="lib/vue.min.js"></script>
+	<!-- <script type="text/javascript" src="lib/vue-router.js"></script> -->
+	<!-- <script type="text/javascript" src="lib/axios.min.js"></script> -->
+</head>
+<body>
+	<div class="container" id="lavue">
+		<div class="row">
+			<div class="col-md-1 col-md-offset-10">
+				<button class="btn btn-default"><a href="connexion.html">Connexion</a></button>
+			</div>
+			<div class="col-md-1 ">
+				<button class="btn btn-default"><a href="inscription.html">Inscription</a></button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-3 col-md-offset-2">
+				<input
+				v-model="newTodoText"
+				@keyup.enter="addNewTodo"
+				placeholder="Recherche d'une image"
+				type="text"
+				>
+			</div>
+			<div class="col-md-3">
+				<div class="drop">
+					<input 
+						id="inputImg"
+						type="file"
+						placeholder="Recherche"
+						multiple="multiple"
+						accept="image/*" 
+						@change="onFileChange"
+						>
+					<p>Deposez vos fichiers ici</p>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<img :src="image"/>
+				<button @click="removeImage">Remove image</button>
+				<button @click="envoie">Envoie image</button>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12">
+				<ul is="todo-item"
+					v-for="(todo, index) in alea"
+					:title="todo"
+					@remove="todos.splice(index, 1)">
+				</ul>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
+
