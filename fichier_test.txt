@@ -1,1 +1,5 @@
 Voila un petit fichier cr√er pour utiliser les branches avec git
+	Pour switcher de branche :
+		git checkout nomdelabranche
+	Pour voir sur quelle branche on est : 
+		git branch
