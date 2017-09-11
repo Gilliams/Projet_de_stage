@@ -1,49 +1,32 @@
 <?php include './php/header.php'; ?>
-    <style>
-        .row{
-            margin-right: 0px;
-            margin-left: 0px;
-        }
-        h2{
-            text-align: center;
-        }
-        p{
-            display: inline-block;
-            margin: 0px 30px 0px 30px;
+<?php //include './save/categorie_test.html'; ?>
 
-        }
-        li{
-            /*list-style: none;*/
-            margin-top: 20px;
-        }
-        .col-md-8{
-            padding-left: 0px;
-            padding-right: 0px;
-        ;
-        }
-        .col-md-6{
-            padding-left: 0px;
-            padding-right: 0px;
-        }
-        .folder{
-            text-align: center;
-            background-color: #ffe9e9;
-            border: 1px solid black;
-        }
+<h2>Test Matrice</h2>
+<?php
+// Initialisation
+$n=5; $p=5; 	 	 	   //nb lignes, nb colonnes
+$mat=array($n);                   // $mat est un tableau de lignes
+for ($i=0; $i<$n; $i++) {         // les indices de lignes vont de 0 à 4
+    $mat[$i]=array($p);           // chaque ligne est tableau de nombres ou de chaines
+    for ($j=0; $j<$p; $j++)
+        $mat[$i][$j]="($i,$j)";   // initialisation avec les n° de ligne et colonne
+        array_multisort($mat[$i], SORT_DESC);
+    // à l'intérieur des guillemets on peut mettre des variables
+} // fin de for $i
+print "<pre>";
+print_r($mat);                    // affichage rapide du tableau $mat
+print "</pre>";
 
-    </style>
-    <container-fluid id="apptest">
-        <h1>Page de test ;)</h1>
-        <div class="row" >
-            <div class="col-md-8">
-                <h2>Categorie</h2>
-                    <ul>
-                        <li><router-link to="/Categorie1"><button >Categorie 1</button></router-link></li>
-                        <li><router-link to="/Categorie2"><button >Categorie 2</button></router-link></li>
-                    </ul>
-            </div>
-        </div>
-        <router-view></router-view>
-    </container-fluid>
 
+// Affichage sous forme de table  :
+/*print "<table>";
+for ($i=0; $i<$n; $i++) {
+    print "<tr>";
+    for ($j=0; $j<$p; $j++)
+        print "<td width=50>" . $mat[$i][$j] . "</td>";
+    print "</tr>";
+}
+print "</table>";*/
+
+?>
 <?php include './php/footer.php'; ?>

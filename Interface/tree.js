@@ -9,7 +9,8 @@ let component_1 = {
                 </li>
                 <input type="text" v-model="newList" @keyup.enter="addList">
             </ul>
-            {{message}}
+                <button @click="consolog">console</button>
+                <router-link to="/" tag="button">Retour</router-link>
                 <router-view></router-view>
         </div>
     `,
@@ -26,11 +27,16 @@ let component_1 = {
     },
     methods: {
         addList() {
-            this.$router.options.routes.push({path: '/' + this.newList + '/', component: Parents, name: this.newList})
-            console.log(this.$router.options.routes)
             this.list.push({name: this.newList})
+            router.push({path: '/' + this.newList + '/', component:'Parents', name: this.newList})
             this.newList = ''
+            console.log(this.$router)
+            console.log(this.list)
         },
+        consolog(){
+            console.log(this.$router)
+            console.log(this.list)
+        }
     }
 }
 let Parents = {
@@ -39,6 +45,7 @@ let Parents = {
         <ul>
         <li v-for="e in parentlist">{{e.name}}</li>
         </ul>
+        {{msg}}
     </div>`,
     data () {
         return {
@@ -46,7 +53,13 @@ let Parents = {
                 {name: 'fichier_ct1'},
                 {name: 'fichier_ct2'},
                 {name: 'fichier_ct3'}
-            ]
+            ],
+            msg: 'Hello'
+        }
+    },
+     beforeRouteEnter(to, from, next) {
+        if(from === 'Mao'){
+            console.log("I'm Mao")
         }
     }
 };
@@ -61,7 +74,7 @@ let Alkane = {
 
 const router = new VueRouter({
     routes: [
-        { path: '/Mao/', component: Parents, name: 'Mao', children:[{path: '/Mao/child'}]},
+        { path: '/Mao/', component: Parents, name: 'Mao'},
         { path: '/Alkane/', component: Parents, name: 'Alkane'},
         { path: '/Acyclic/', component: Parents, name: 'Acyclic'},
     ]

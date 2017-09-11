@@ -3,7 +3,7 @@
 <h1>TreeView</h1>
 <div class="col-md-3">
     <div id="treeview">
-        <component_1 message="lol"></component_1>
+        <component_1></component_1>
     </div>
 </div>
 

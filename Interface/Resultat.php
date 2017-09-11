@@ -25,14 +25,15 @@ $fichier = "output2.txt";
 $folder = '\Acyclic';
 
 echo "<br>"."<br>" ;
-echo "Affiche le resultat du programme (S'il n'y a pas de résultat: echo à la ligne 53 :)". "<br>"."<br>" ;
+// echo "Affiche le resultat du programme (S'il n'y a pas de résultat: echo à la ligne 34 :)". "<br>"."<br>" ;
 
-echo "<pre>";
 /**
  * Execute avec l'invite de commande le code en Java avec 3 arguments en paramétres ( [1: le dossier à lire] [2: le fichier de sortie] [3: pourcentage de succes] )
  */
+/*echo "<pre>";
 echo shell_exec('java -Xmx1000m graph_embedding.Main '.$folderCode. ' '. $fichier.' 0.98');
-echo "</pre>";
+echo "</pre>";*/
+
 echo "<br>" ;
 echo "Affiche le resultat du fichier :".$fichier. "<br>"."<br>" ;
 /**
@@ -84,9 +85,9 @@ foreach($_POST["option"] as $checkoption){
 /**
  * Affiche le tableau $allFiles trié
  */
-/*echo "<pre>";
+echo "<pre>";
 print_r($allFiles);
-echo"</pre>"."<br>"."<br>";*/
+echo"</pre>"."<br>"."<br>";
 
 
 /**

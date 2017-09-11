@@ -9,13 +9,11 @@
     <title>ProjetStage</title>
     <link rel="stylesheet" href="../Inc/css/bootstrap.min.css" >
     <link rel="stylesheet" href="../Inc/css/style.css" >
-    <script type="text/javascript" src="../Inc/js/vue.min.js"></script>
+    <script type="text/javascript" src="../Inc/js/vue.js"></script>
     <script type="text/javascript" src="../Inc/js/vue-router.js"></script>
     <script type="text/javascript" src="../Inc/js/axios.min.js"></script>
     <script type="text/javascript" src="../Inc/js/chargement_page.js"></script>
-    <script src="../Inc/js/plotly-latest.min.js"></script>
-    <script src="../Inc/js/Sigma/sigma.js"></script>
-    <script src="../Inc/js/Sigma/sigma.parsers.json.js"></script>
+    <script src="../Inc/js/echarts.js"></script>
 
 </head>
 
@@ -42,7 +40,7 @@
                     <ul class="nav navbar-nav">
                         <li><a href="./Home.php">Home</a></li>
                         <li><a href="./Resultat.php">Resultat</a></li>
-<!--                        <li><a href="./Test.php">Test(!)</a></li>-->
+                        <li><a href="./Test.php">Test</a></li>
                         <li><a href="./TreeView.php">TreeView</a></li>
 <!--                        <li><a href="./Pagination.php">Pagination</a></li>-->
                         <li><a href="./Graph.php">Graph</a></li>
